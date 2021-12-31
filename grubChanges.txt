@@ -1,0 +1,9 @@
+Increase the GRUB_TIMEOUT value to 10 seconds, so grub pauses in menu long enough to choose
+a kernel to boot:
+* Uncomment GRUB_TIMEOUT and set it to 10: GRUB_TIMEOUT=10
+* Comment out GRUB_TIMEOUT_STYLE=hidden
+If the newly installed kernel fails to boot, it is nice to be able to see the early messages to figure out
+why the kernel failed to boot.
+ 
+Enable printing early boot messages to vga using the earlyprintk=vga kernel boot option:
+GRUB_CMDLINE_LINUX="earlyprintk=vga"
